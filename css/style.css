@@ -58,8 +58,13 @@ body {
             background-image: url(../images/avatar-michelle.jpg);
             background-repeat: no-repeat;
             border-radius: 20px;
-            background-size: contain;
+            border: 1px solid #fff;
+            background-size: cover;
             margin-right: 15px;
+            transition: all 1s ease
+        }
+        .row.bottom .picture:hover {
+            border-radius: 5px;
         }
         .row.bottom .author {
             flex-grow: 1;
@@ -81,4 +86,22 @@ body {
             background-position: center;
             border-radius: 16px;
             cursor: pointer;
+            transition: all 0.5s ease;
+            position: relative;
         }
+        .row.bottom .share:hover {
+            transform: rotate(-90deg);
+        }
+
+.socials.visible {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 250px;
+    height: 55px;
+    background: var(--share-color);
+    color: var(--unknown-color);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
