@@ -1,0 +1,75 @@
+body {
+    background-color: var(--bg-color);
+}
+.container {
+    background-color: #fff;
+    width: 800px;
+    display: grid;
+    grid-template-areas: 
+    "image toprow toprow"
+    "image midrow midrow"
+    "image bottomrow bottomrow";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.column-left {
+    width: 285px;
+    background-image: url(../images/drawers.jpg);
+    background-size: cover;
+}
+.column-right {
+    padding: 35px;
+}
+    .column-right .row:not(:last-child) {
+        margin-bottom: 15px;
+        
+    }
+    .row.top{
+        display: flex;
+        flex-flow: wrap;
+        grid-area: toprow;
+        font-size: 14px;
+        color: var(--share-color);
+        font-weight: 700;
+    }
+    .row.mid{
+        grid-area: midrow;
+        color: var(--secondary-color);
+        font-size: 13px;
+        font-weight: 500;
+        
+    }
+    .row.bottom{
+        display: flex;
+        align-items: center;
+        grid-area: bottomrow;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 0;
+    }
+        .row.bottom .author {
+            flex-grow: 1;
+        }
+            .row.bottom .author .name {
+                color: var(--share-color);
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            .row.bottom .author .date {
+                color: var(--unknown-color);
+            }
+        .row.bottom .share {
+            width: 32px;
+            height: 32px;
+            background-image: url(../images/icon-share.svg);
+            background-color: var(--bg-color);
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 16px;
+            cursor: pointer;
+        }
